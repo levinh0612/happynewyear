@@ -88,9 +88,21 @@ function animate() {
 
 function drawMoon() {
     var moon = document.getElementById("moon");
-    var centerX = canvas.width - 200,
-        centerY = 100,
+    var centerX, centerY, width;
+
+    // Set moon position and size for desktop
+    if (window.innerWidth > 768) {
+        centerX = canvas.width - 200;
+        centerY = 100;
         width = 80;
+    }
+    // Set moon position and size for mobile
+    else {
+        centerX = canvas.width / 2; // Center moon horizontally on mobile
+        centerY = 50; // Adjust the vertical position for mobile
+        width = 40; // Reduce moon size for mobile
+    }
+
     if (moon.complete) {
         ctx.drawImage(moon, centerX, centerY, width, width);
     } else {
@@ -98,6 +110,7 @@ function drawMoon() {
             ctx.drawImage(moon, centerX, centerY, width, width);
         };
     }
+
     var index = 0;
     for (var i = 0; i < 10; i++) {
         ctx.save();
@@ -109,12 +122,14 @@ function drawMoon() {
             0,
             2 * Math.PI
         );
-        ctx.fillStyle = "rgba(240,219,120,0.005)";
+        ctx.fillStyle = "rgba(240, 219, 120, 0.005)";
         index += 2;
         ctx.fill();
         ctx.restore();
     }
 }
+
+
 Array.prototype.foreach = function(callback) {
     for (var i = 0; i < this.length; i++) {
         if (this[i] !== null) {

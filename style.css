@@ -54,6 +54,13 @@ body {
     left: 0;
 }
 
+.wrapper {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 60%;
+}
+
 @keyframes glow {
     0% {
         opacity: 0.9;
@@ -83,3 +90,37 @@ body {
         opacity: 0;
     }
 }
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .star {
+        width: 2px;
+        height: 2px;
+    }
+
+    .star--medium {
+        width: 4px;
+        height: 4px;
+    }
+
+    .star--big {
+        width: 6px;
+        height: 6px;
+    }
+
+    .comet {
+        width: 4px;
+        height: 4px;
+    }
+
+    .comet:after {
+        width: 10vw;
+    }
+}
+

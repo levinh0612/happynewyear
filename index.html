@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <script id="jqbb" src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
     <style>
         html,
@@ -32,6 +33,7 @@
         }
         
         .shape {
+            position: static !important;
             z-index: 9999 !important;
         }
     </style>
@@ -39,21 +41,22 @@
 </head>
 
 <body onselectstart="return false">
+    <div class="wrapper">
+        <div id="app">
+
+        </div>
+    </div>
     <div class="star comet"></div>
     <script src="index.js"></script>
     <canvas id="cas" style="background-color: rgba(0, 5, 24, 1); z-index: 9999">
-      Nghiemtv.com
+      LeVinhDev
     </canvas>
     <div class="city">
         <img src="img/city.png" alt="" />
     </div>
     <img src="img/moon.png" alt="" id="moon" style="visibility: hidden" />
     <div style="display: none">
-        <div class="shape">🏮2022</div>
-        <!-- <div class="shape">🏮 I </div>
-        <div class="shape">🏮 Love</div>
-        <div class="shape">🏮 nghiemtv</div> -->
-
+        <div class="shape">🏮2024</div>
     </div>
     <audio autoplay loop id="music">
       <source src="mp3/xinnian.mp3" />
@@ -62,6 +65,7 @@
     <script src="jquery.min.js"></script>
     <script src="fire.js"></script>
     <script src="talk.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </body>
 
 </html>
