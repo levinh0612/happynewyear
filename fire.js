@@ -235,8 +235,8 @@ Boom.prototype = {
     _shapBoom: function() {
         var that = this;
         putValue(ocas, octx, this.shape, 5, function(dots) {
-            var dx = canvas.width / 2 - that.x;
-            var dy = canvas.height / 2 - that.y;
+            var dx = canvas.width / 2 - that.x + 100;
+            var dy = canvas.height / 2 - that.y + 100;
             for (var i = 0; i < dots.length; i++) {
                 color = {
                     a: dots[i].a,
